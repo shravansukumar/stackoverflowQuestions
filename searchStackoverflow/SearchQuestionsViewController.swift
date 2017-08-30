@@ -47,6 +47,7 @@ class SearchQuestionsViewController: UIViewController {
                         self.realm.add(item, update: true)
                     }
                 }
+                print(self.realm.objects(Question.self))
             } else  {
                 print("Not able to store items")
             }

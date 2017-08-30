@@ -18,6 +18,7 @@ class Question: Object, Mappable {
     dynamic var isAnswered: Bool = false
     dynamic var viewCount: Int = 0
     dynamic var answerCount: Int = 0
+    dynamic var user: User? = nil
     
     
     override static func primaryKey() -> String? {
@@ -35,5 +36,6 @@ class Question: Object, Mappable {
         isAnswered <- map["is_answered"]
         viewCount <- map["view_count"]
         answerCount <- map["answer_count"]
+        user <- map["owner"]
     }
 }

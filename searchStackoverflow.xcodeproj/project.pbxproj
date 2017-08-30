@@ -10,6 +10,7 @@
 		A42A19F71F571A32006D29EF /* QuestionsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A19F61F571A32006D29EF /* QuestionsURL.swift */; };
 		A42A19FB1F572E06006D29EF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A19FA1F572E06006D29EF /* Question.swift */; };
 		A42A19FD1F57368B006D29EF /* SearchStackoverflowServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A19FC1F57368B006D29EF /* SearchStackoverflowServices.swift */; };
+		A42A1A011F5744BC006D29EF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A1A001F5744BC006D29EF /* User.swift */; };
 		A4A381BB1F55CA5000F3943E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A381BA1F55CA5000F3943E /* AppDelegate.swift */; };
 		A4A381BD1F55CA5000F3943E /* SearchQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A381BC1F55CA5000F3943E /* SearchQuestionsViewController.swift */; };
 		A4A381C01F55CA5000F3943E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A381BE1F55CA5000F3943E /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		A42A19F61F571A32006D29EF /* QuestionsURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsURL.swift; path = ../QuestionsURL.swift; sourceTree = "<group>"; };
 		A42A19FA1F572E06006D29EF /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		A42A19FC1F57368B006D29EF /* SearchStackoverflowServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchStackoverflowServices.swift; sourceTree = "<group>"; };
+		A42A1A001F5744BC006D29EF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A4A381B71F55CA5000F3943E /* searchStackoverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = searchStackoverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A381BA1F55CA5000F3943E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4A381BC1F55CA5000F3943E /* SearchQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQuestionsViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +48,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A42A19FE1F5742F5006D29EF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A42A19F61F571A32006D29EF /* QuestionsURL.swift */,
+				A42A19FC1F57368B006D29EF /* SearchStackoverflowServices.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		A42A19FF1F5742FF006D29EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A42A19FA1F572E06006D29EF /* Question.swift */,
+				A42A1A001F5744BC006D29EF /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A4A381AE1F55CA5000F3943E = {
 			isa = PBXGroup;
 			children = (
@@ -69,10 +89,9 @@
 			children = (
 				A4A381BA1F55CA5000F3943E /* AppDelegate.swift */,
 				A4A381BC1F55CA5000F3943E /* SearchQuestionsViewController.swift */,
-				A42A19F61F571A32006D29EF /* QuestionsURL.swift */,
-				A42A19FA1F572E06006D29EF /* Question.swift */,
-				A42A19FC1F57368B006D29EF /* SearchStackoverflowServices.swift */,
 				A4A381BE1F55CA5000F3943E /* Main.storyboard */,
+				A42A19FF1F5742FF006D29EF /* Model */,
+				A42A19FE1F5742F5006D29EF /* Utility */,
 				A4A381C11F55CA5000F3943E /* Assets.xcassets */,
 				A4A381C31F55CA5000F3943E /* LaunchScreen.storyboard */,
 				A4A381C61F55CA5000F3943E /* Info.plist */,
@@ -223,6 +242,7 @@
 			files = (
 				A42A19FB1F572E06006D29EF /* Question.swift in Sources */,
 				A42A19F71F571A32006D29EF /* QuestionsURL.swift in Sources */,
+				A42A1A011F5744BC006D29EF /* User.swift in Sources */,
 				A4A381BD1F55CA5000F3943E /* SearchQuestionsViewController.swift in Sources */,
 				A42A19FD1F57368B006D29EF /* SearchStackoverflowServices.swift in Sources */,
 				A4A381BB1F55CA5000F3943E /* AppDelegate.swift in Sources */,
