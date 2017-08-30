@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A42A19F71F571A32006D29EF /* QuestionsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A19F61F571A32006D29EF /* QuestionsURL.swift */; };
+		A42A19FB1F572E06006D29EF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A19FA1F572E06006D29EF /* Question.swift */; };
+		A42A19FD1F57368B006D29EF /* SearchStackoverflowServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A19FC1F57368B006D29EF /* SearchStackoverflowServices.swift */; };
 		A4A381BB1F55CA5000F3943E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A381BA1F55CA5000F3943E /* AppDelegate.swift */; };
-		A4A381BD1F55CA5000F3943E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A381BC1F55CA5000F3943E /* ViewController.swift */; };
+		A4A381BD1F55CA5000F3943E /* SearchQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A381BC1F55CA5000F3943E /* SearchQuestionsViewController.swift */; };
 		A4A381C01F55CA5000F3943E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A381BE1F55CA5000F3943E /* Main.storyboard */; };
 		A4A381C21F55CA5000F3943E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A381C11F55CA5000F3943E /* Assets.xcassets */; };
 		A4A381C51F55CA5000F3943E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A381C31F55CA5000F3943E /* LaunchScreen.storyboard */; };
+		AF9EE20043DE14A2E9CBBD4A /* Pods_searchStackoverflow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13311850BD08028D69BAE103 /* Pods_searchStackoverflow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13311850BD08028D69BAE103 /* Pods_searchStackoverflow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_searchStackoverflow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A42A19F61F571A32006D29EF /* QuestionsURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionsURL.swift; path = ../QuestionsURL.swift; sourceTree = "<group>"; };
+		A42A19FA1F572E06006D29EF /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A42A19FC1F57368B006D29EF /* SearchStackoverflowServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchStackoverflowServices.swift; sourceTree = "<group>"; };
 		A4A381B71F55CA5000F3943E /* searchStackoverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = searchStackoverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A381BA1F55CA5000F3943E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4A381BC1F55CA5000F3943E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4A381BC1F55CA5000F3943E /* SearchQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQuestionsViewController.swift; sourceTree = "<group>"; };
 		A4A381BF1F55CA5000F3943E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4A381C11F55CA5000F3943E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4A381C41F55CA5000F3943E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4A381C61F55CA5000F3943E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3249B9E9C1A6663032E4489 /* Pods-searchStackoverflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-searchStackoverflow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-searchStackoverflow/Pods-searchStackoverflow.debug.xcconfig"; sourceTree = "<group>"; };
+		E94FE14C8269A7CCBABA0D75 /* Pods-searchStackoverflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-searchStackoverflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-searchStackoverflow/Pods-searchStackoverflow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9EE20043DE14A2E9CBBD4A /* Pods_searchStackoverflow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				A4A381B91F55CA5000F3943E /* searchStackoverflow */,
 				A4A381B81F55CA5000F3943E /* Products */,
+				CEC9969C6842A6E352703501 /* Pods */,
+				A90083E70D03BC880E5A3011 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +68,33 @@
 			isa = PBXGroup;
 			children = (
 				A4A381BA1F55CA5000F3943E /* AppDelegate.swift */,
-				A4A381BC1F55CA5000F3943E /* ViewController.swift */,
+				A4A381BC1F55CA5000F3943E /* SearchQuestionsViewController.swift */,
+				A42A19F61F571A32006D29EF /* QuestionsURL.swift */,
+				A42A19FA1F572E06006D29EF /* Question.swift */,
+				A42A19FC1F57368B006D29EF /* SearchStackoverflowServices.swift */,
 				A4A381BE1F55CA5000F3943E /* Main.storyboard */,
 				A4A381C11F55CA5000F3943E /* Assets.xcassets */,
 				A4A381C31F55CA5000F3943E /* LaunchScreen.storyboard */,
 				A4A381C61F55CA5000F3943E /* Info.plist */,
 			);
 			path = searchStackoverflow;
+			sourceTree = "<group>";
+		};
+		A90083E70D03BC880E5A3011 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13311850BD08028D69BAE103 /* Pods_searchStackoverflow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEC9969C6842A6E352703501 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3249B9E9C1A6663032E4489 /* Pods-searchStackoverflow.debug.xcconfig */,
+				E94FE14C8269A7CCBABA0D75 /* Pods-searchStackoverflow.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4A381C91F55CA5000F3943E /* Build configuration list for PBXNativeTarget "searchStackoverflow" */;
 			buildPhases = (
+				15159F28CF08ABBCF4B76835 /* [CP] Check Pods Manifest.lock */,
 				A4A381B31F55CA5000F3943E /* Sources */,
 				A4A381B41F55CA5000F3943E /* Frameworks */,
 				A4A381B51F55CA5000F3943E /* Resources */,
+				C53567C6DF5BB48942C4F85B /* [CP] Embed Pods Frameworks */,
+				487662890C6F4B95290434C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,12 +168,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15159F28CF08ABBCF4B76835 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		487662890C6F4B95290434C3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-searchStackoverflow/Pods-searchStackoverflow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C53567C6DF5BB48942C4F85B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-searchStackoverflow/Pods-searchStackoverflow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A4A381B31F55CA5000F3943E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4A381BD1F55CA5000F3943E /* ViewController.swift in Sources */,
+				A42A19FB1F572E06006D29EF /* Question.swift in Sources */,
+				A42A19F71F571A32006D29EF /* QuestionsURL.swift in Sources */,
+				A4A381BD1F55CA5000F3943E /* SearchQuestionsViewController.swift in Sources */,
+				A42A19FD1F57368B006D29EF /* SearchStackoverflowServices.swift in Sources */,
 				A4A381BB1F55CA5000F3943E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +346,7 @@
 		};
 		A4A381CA1F55CA5000F3943E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3249B9E9C1A6663032E4489 /* Pods-searchStackoverflow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 48UFH6Q9SV;
@@ -272,6 +360,7 @@
 		};
 		A4A381CB1F55CA5000F3943E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E94FE14C8269A7CCBABA0D75 /* Pods-searchStackoverflow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 48UFH6Q9SV;
@@ -302,6 +391,7 @@
 				A4A381CB1F55CA5000F3943E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
