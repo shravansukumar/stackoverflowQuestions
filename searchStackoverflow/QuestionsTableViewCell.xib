@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionsTableViewCell" id="KGk-i7-Jjw" customClass="QuestionsTableViewCell" customModule="searchStackoverflow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBb-ii-bYj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzL-Km-wSl" userLabel="votesLabel">
+                                <rect key="frame" x="10" y="10" width="37" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgC-qu-ry0" userLabel="authorLabel">
+                                <rect key="frame" x="273" y="10" width="37" height="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium a" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pft-Yi-CjD" userLabel="titleTextView">
+                                <rect key="frame" x="10" y="37.5" width="300" height="52"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AgC-qu-ry0" secondAttribute="trailing" constant="10" id="2zS-Se-LyC"/>
+                            <constraint firstItem="AgC-qu-ry0" firstAttribute="top" secondItem="IBb-ii-bYj" secondAttribute="top" constant="10" id="Etq-Wp-mbH"/>
+                            <constraint firstItem="pft-Yi-CjD" firstAttribute="top" secondItem="AgC-qu-ry0" secondAttribute="bottom" constant="10" id="MbN-97-pz8"/>
+                            <constraint firstItem="lzL-Km-wSl" firstAttribute="top" secondItem="IBb-ii-bYj" secondAttribute="top" constant="10" id="NRI-aE-tJd"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="c7q-8b-GSJ"/>
+                            <constraint firstItem="pft-Yi-CjD" firstAttribute="leading" secondItem="IBb-ii-bYj" secondAttribute="leading" constant="10" id="ea2-QN-dPS"/>
+                            <constraint firstItem="lzL-Km-wSl" firstAttribute="leading" secondItem="IBb-ii-bYj" secondAttribute="leading" constant="10" id="mmX-X4-emR"/>
+                            <constraint firstAttribute="trailing" secondItem="pft-Yi-CjD" secondAttribute="trailing" constant="10" id="oXR-Ez-k5O"/>
+                            <constraint firstAttribute="bottom" secondItem="pft-Yi-CjD" secondAttribute="bottom" constant="10" id="t9w-PG-rF4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="IBb-ii-bYj" secondAttribute="bottom" id="Rqr-Pa-9Qw"/>
+                    <constraint firstAttribute="trailing" secondItem="IBb-ii-bYj" secondAttribute="trailing" id="d9g-Ce-GUU"/>
+                    <constraint firstItem="IBb-ii-bYj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qU7-xz-owY"/>
+                    <constraint firstItem="IBb-ii-bYj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tA2-4P-R5T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="authorLabel" destination="AgC-qu-ry0" id="dx3-z7-UIm"/>
+                <outlet property="titleTextView" destination="pft-Yi-CjD" id="B3m-rE-Sx4"/>
+                <outlet property="votesLabel" destination="lzL-Km-wSl" id="i9h-35-kVs"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

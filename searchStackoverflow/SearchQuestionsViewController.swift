@@ -20,19 +20,35 @@ class SearchQuestionsViewController: UIViewController {
     // MARK: - Constants and Variables
     var searchtext: String!
     let realm = try! Realm()
-    let manager = Alamofire.SessionManager.default
     let networkManager = SearchStackoverflowServices()
+    var questions = [Question]()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
     }
     
     // MARK: - Private Methods
+    private func setupTableView() {
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight =  UITableViewAutomaticDimension
+        
+        // Register cells
+        let nib = UINib(nibName: "QuestionsTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "questionsTableViewCell")
+    }
+    
+    
     private func buildURLForSearching() -> String {
         let searchString = QuestionsURL.baseURL + QuestionsURL.search + QuestionsURL.site + QuestionsURL.filter + QuestionsURL.title
         return searchString
+    }
+    
+    private func retreiveQuestions() -> [Question] {
+        let questions = realm.objects(Question.self)
+        return Array(questions)
     }
     
     // MARK: - File Private Methods
@@ -47,7 +63,8 @@ class SearchQuestionsViewController: UIViewController {
                         self.realm.add(item, update: true)
                     }
                 }
-                print(self.realm.objects(Question.self))
+                self.questions = self.retreiveQuestions()
+                self.tableView.reloadData()
             } else  {
                 print("Not able to store items")
             }
@@ -60,20 +77,32 @@ class SearchQuestionsViewController: UIViewController {
 extension SearchQuestionsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if questions.count > 0 {
+            tableView.separatorStyle = .singleLine
+            return questions.count
+        } else {
+            tableView.separatorStyle = .none
+            return 0
+        }
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = "Hello"
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "questionsTableViewCell") as! QuestionsTableViewCell        
+        let question = questions[indexPath.row]
+        cell.votesLabel.text = "Score: " + String(question.score)
+        cell.authorLabel.text = "Author: " + (question.user?.name)!
+        cell.titleTextView.text = question.title
+        return cell
     }
 }
 
 // MARK: - UITableViewDelegate
 extension SearchQuestionsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let question = questions[indexPath.row]
+        print(question)
+    }
 }
 
 // MARK: - UISearchBarDelegate
@@ -84,11 +113,3 @@ extension SearchQuestionsViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
     }
 }
-
-
-
-
-
-
-
-
