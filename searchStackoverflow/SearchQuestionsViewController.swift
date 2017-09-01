@@ -46,6 +46,12 @@ class SearchQuestionsViewController: UIViewController {
         return searchString
     }
     
+    func buildURLForAnswersWith(id: Int) -> String {
+        let answersURL = QuestionsURL.baseURL + QuestionsURL.questions + "\(id)" + QuestionsURL.answers + QuestionsURL.order + "&" + QuestionsURL.site + QuestionsURL.filter
+        print(answersURL)
+        return answersURL
+    }
+    
     private func retreiveQuestions() -> [Question] {
         let questions = realm.objects(Question.self)
         return Array(questions)
@@ -68,7 +74,18 @@ class SearchQuestionsViewController: UIViewController {
             } else  {
                 print("Not able to store items")
             }
-            
+        }
+    }
+    
+    fileprivate func storeAnswersFor(id: Int) {
+        let urlString = buildURLForAnswersWith(id: id)
+        networkManager.getAnswers(urlString) {
+            success, result in
+            if success == true {
+                
+            } else {
+                
+            }
         }
     }
 }
@@ -101,7 +118,9 @@ extension SearchQuestionsViewController: UITableViewDataSource {
 extension SearchQuestionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let question = questions[indexPath.row]
-        print(question)
+        if question.answerCount > 0 {
+            storeAnswersFor(id: question.questionId)
+        }
     }
 }
 

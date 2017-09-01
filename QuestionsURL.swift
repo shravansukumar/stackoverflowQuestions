@@ -15,4 +15,8 @@ struct QuestionsURL {
     static let site =  "site=stackoverflow"
     static let filter = "&filter=withbody"
     static let title = "&intitle="
+    
+    static let answers = "/answers?"
+    static let questions = "questions/"
+    static let order = "order=desc"
 }

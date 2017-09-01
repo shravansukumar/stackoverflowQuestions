@@ -32,4 +32,21 @@ public final class SearchStackoverflowServices {
             }
         }
     }
+    
+    func getAnswers(_ url: String, responseResult: @escaping response) {
+       let answerURL = URL(string: url)
+        manager.request(answerURL!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON {
+            response in
+            
+            if let error = response.result.error {
+                print(error.localizedDescription)
+                return responseResult(false, nil)
+            } else {
+                if let result = response.result.value as? [String : Any], let item = result["items"] as? [[String : Any]] {
+                    print(item)
+                    return responseResult(true, item)
+                }
+            }
+        }
+    }
 }
