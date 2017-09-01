@@ -47,13 +47,7 @@ class SearchQuestionsViewController: UIViewController {
         let searchString = QuestionsURL.baseURL + QuestionsURL.search + QuestionsURL.site + QuestionsURL.filter + QuestionsURL.title
         return searchString
     }
-    
-    func buildURLForAnswersWith(id: Int) -> String {
-        let answersURL = QuestionsURL.baseURL + QuestionsURL.questions + "\(id)" + QuestionsURL.answers + QuestionsURL.order + "&" + QuestionsURL.site + QuestionsURL.filter
-        print(answersURL)
-        return answersURL
-    }
-    
+        
     private func retreiveQuestionsForPhrase(_ phrase: String) -> [Question] {
         let questions = realm.objects(Question.self).filter("phrase == %@", phrase)
         return Array(questions)
@@ -80,25 +74,6 @@ class SearchQuestionsViewController: UIViewController {
         }
     }
     
-    fileprivate func storeAnswersFor(_ question: Question) {
-        let urlString = buildURLForAnswersWith(id: question.questionId)
-        networkManager.getAnswers(urlString) {
-            success, result in
-            if success == true {
-                let answers = Mapper<Answer>().mapSet(JSONArray: result!)
-                for answer in answers {
-                    try! self.realm.write {
-                        self.realm.add(answer, update: true)
-                    }
-                }
-                self.pushToAnswersViewControllerFor(question)
-                
-            } else {
-                Utility.showAlert(title: "Error", message: "There seems to be a problem with fetching the answers!")
-            }
-        }
-    }
-    
     fileprivate func pushToAnswersViewControllerFor(_ question: Question) {
         let answersViewController = mainStoryboard.instantiateViewController(withIdentifier: "answersViewController") as! AnswersViewController
         answersViewController.question = question
@@ -108,7 +83,6 @@ class SearchQuestionsViewController: UIViewController {
 
 // MARK: - UITableViewDataSource
 extension SearchQuestionsViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if questions.count > 0 {
             tableView.separatorStyle = .singleLine
@@ -136,7 +110,7 @@ extension SearchQuestionsViewController: UITableViewDelegate {
         let question = questions[indexPath.row]
         if question.answerCount > 0 {
             print("***********\(question.answerCount)*******")
-            storeAnswersFor(question)
+            pushToAnswersViewControllerFor(question)
         } else {
             Utility.showAlert(title: "Error", message: "The selected questions seems to be unanswered")
         }

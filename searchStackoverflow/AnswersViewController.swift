@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import ObjectMapper
 
 class AnswersViewController: UIViewController {
 
@@ -15,10 +16,16 @@ class AnswersViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     // MARK: - Constants and Variables
-    var question: Question!
+    var question: Question! {
+        didSet {
+            storeAnswersFor(question)
+        }
+    }
     var answers = [Answer]()
     let realm = try! Realm()
+    let networkManager = SearchStackoverflowServices()
     let cellIdentifier = "questionsTableViewCell"
+    
     
     
     // MARK: - Lifecycle
@@ -26,7 +33,6 @@ class AnswersViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
-        retreiveAnswers()
     }
     
     // MARK: - Private Methods
@@ -37,6 +43,30 @@ class AnswersViewController: UIViewController {
         // Register cells
         let nib = UINib(nibName: "QuestionsTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
+    }
+    
+    func buildURLForAnswersWith(id: Int) -> String {
+        let answersURL = QuestionsURL.baseURL + QuestionsURL.questions + "\(id)" + QuestionsURL.answers + QuestionsURL.order + "&" + QuestionsURL.site + QuestionsURL.filter
+        print(answersURL)
+        return answersURL
+    }
+    
+    fileprivate func storeAnswersFor(_ question: Question) {
+        let urlString = buildURLForAnswersWith(id: question.questionId)
+        networkManager.getAnswers(urlString) {
+            success, result in
+            if success == true {
+                let answers = Mapper<Answer>().mapSet(JSONArray: result!)
+                for answer in answers {
+                    try! self.realm.write {
+                        self.realm.add(answer, update: true)
+                    }
+                }
+                self.retreiveAnswers()
+            } else {
+                Utility.showAlert(title: "Error", message: "There seems to be a problem with fetching the answers!")
+            }
+        }
     }
     
     private func retreiveAnswers() {
