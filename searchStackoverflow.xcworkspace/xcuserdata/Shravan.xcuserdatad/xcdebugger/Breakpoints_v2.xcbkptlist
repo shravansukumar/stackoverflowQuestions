@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "searchStackoverflow/SearchQuestionsViewController.swift"
-            timestampString = "525931000.308009"
+            timestampString = "525936943.026381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "searchBarSearchButtonClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,75 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "searchStackoverflow/SearchQuestionsViewController.swift"
-            timestampString = "525927790.026495"
+            timestampString = "525936943.026381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "storeQuestionsFor(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "searchStackoverflow.SearchQuestionsViewController.(storeQuestionsFor in _1AE917E570633C3C7387B3EBE62129E1) (Swift.String) -&gt; ()"
-                  moduleName = "searchStackoverflow"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Shravan/Downloads/searchStackoverflow/searchStackoverflow/SearchQuestionsViewController.swift"
-                  timestampString = "525810633.581556"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "232">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "searchStackoverflow.SearchQuestionsViewController.((storeQuestionsFor in _1AE917E570633C3C7387B3EBE62129E1) (Swift.String) -&gt; ()).(closure #1)"
-                  moduleName = "searchStackoverflow"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Shravan/Downloads/searchStackoverflow/searchStackoverflow/SearchQuestionsViewController.swift"
-                  timestampString = "525810633.583271"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "searchStackoverflow/SearchQuestionsViewController.swift"
-            timestampString = "525927790.026495"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "storeQuestionsFor(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "searchStackoverflow/SearchQuestionsViewController.swift"
-            timestampString = "525931000.308009"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "searchStackoverflow/SearchQuestionsViewController.swift"
-            timestampString = "525931000.308009"
+            timestampString = "525936943.026381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "SearchQuestionsViewController"
             landmarkType = "4">
          </BreakpointContent>
@@ -170,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "searchStackoverflow/SearchQuestionsViewController.swift"
-            timestampString = "525931000.308009"
+            timestampString = "525936943.026381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -182,15 +118,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "searchStackoverflow/SearchQuestionsViewController.swift"
-            timestampString = "525931000.308009"
+            timestampString = "525936943.026381"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -198,23 +134,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "searchStackoverflow/SearchStackoverflowServices.swift"
-            timestampString = "525930663.542693"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "getAnswers(_:responseResult:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "searchStackoverflow/SearchStackoverflowServices.swift"
@@ -230,7 +150,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "searchStackoverflow/SearchStackoverflowServices.swift"
@@ -243,14 +163,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "searchStackoverflow.SearchStackoverflowServices.getAnswers (Swift.String, responseResult : (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "searchStackoverflow"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Shravan/Downloads/searchStackoverflow/searchStackoverflow/SearchStackoverflowServices.swift"
-                  timestampString = "525931001.569093"
+                  timestampString = "525932906.878978"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
@@ -258,14 +178,14 @@
                   offsetFromSymbolStart = "108">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "searchStackoverflow.SearchStackoverflowServices.(getAnswers (Swift.String, responseResult : (Swift.Bool, Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1)"
                   moduleName = "searchStackoverflow"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Shravan/Downloads/searchStackoverflow/searchStackoverflow/SearchStackoverflowServices.swift"
-                  timestampString = "525931001.570553"
+                  timestampString = "525932906.881757"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "41"
@@ -278,7 +198,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "searchStackoverflow/SearchStackoverflowServices.swift"
@@ -294,7 +214,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "searchStackoverflow/SearchStackoverflowServices.swift"
@@ -304,6 +224,102 @@
             startingLineNumber = "43"
             endingLineNumber = "43"
             landmarkName = "getAnswers(_:responseResult:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "searchStackoverflow/AnswersViewController.swift"
+            timestampString = "525936943.026381"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "retreiveAnswers()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "searchStackoverflow/AnswersViewController.swift"
+            timestampString = "525936943.026381"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "retreiveAnswers()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "searchStackoverflow/AnswersViewController.swift"
+            timestampString = "525936943.026381"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "retreiveAnswers()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "searchStackoverflow/SearchQuestionsViewController.swift"
+            timestampString = "525936943.026381"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "searchStackoverflow/SearchQuestionsViewController.swift"
+            timestampString = "525936943.026381"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "storeQuestionsFor(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "searchStackoverflow/SearchQuestionsViewController.swift"
+            timestampString = "525936943.026381"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "storeQuestionsFor(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -21,7 +21,9 @@ class SearchQuestionsViewController: UIViewController {
     var searchtext: String!
     let realm = try! Realm()
     let networkManager = SearchStackoverflowServices()
+    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
     var questions = [Question]()
+    let cellIdentifier = "questionsTableViewCell"
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -37,7 +39,7 @@ class SearchQuestionsViewController: UIViewController {
         
         // Register cells
         let nib = UINib(nibName: "QuestionsTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "questionsTableViewCell")
+        tableView.register(nib, forCellReuseIdentifier: cellIdentifier)
     }
     
     
@@ -52,8 +54,8 @@ class SearchQuestionsViewController: UIViewController {
         return answersURL
     }
     
-    private func retreiveQuestions() -> [Question] {
-        let questions = realm.objects(Question.self)
+    private func retreiveQuestionsForPhrase(_ phrase: String) -> [Question] {
+        let questions = realm.objects(Question.self).filter("phrase == %@", phrase)
         return Array(questions)
     }
     
@@ -67,26 +69,40 @@ class SearchQuestionsViewController: UIViewController {
                 for item in questionItems {
                     try! self.realm.write {
                         self.realm.add(item, update: true)
+                        item.phrase = phrase
                     }
                 }
-                self.questions = self.retreiveQuestions()
+                self.questions = self.retreiveQuestionsForPhrase(phrase)
                 self.tableView.reloadData()
             } else  {
-                print("Not able to store items")
+                Utility.showAlert(title: "Error", message: "There seems to be a problem with fetching the questions!")
             }
         }
     }
     
-    fileprivate func storeAnswersFor(id: Int) {
-        let urlString = buildURLForAnswersWith(id: id)
+    fileprivate func storeAnswersFor(_ question: Question) {
+        let urlString = buildURLForAnswersWith(id: question.questionId)
         networkManager.getAnswers(urlString) {
             success, result in
             if success == true {
+                let answers = Mapper<Answer>().mapSet(JSONArray: result!)
+                for answer in answers {
+                    try! self.realm.write {
+                        self.realm.add(answer, update: true)
+                    }
+                }
+                self.pushToAnswersViewControllerFor(question)
                 
             } else {
-                
+                Utility.showAlert(title: "Error", message: "There seems to be a problem with fetching the answers!")
             }
         }
+    }
+    
+    fileprivate func pushToAnswersViewControllerFor(_ question: Question) {
+        let answersViewController = mainStoryboard.instantiateViewController(withIdentifier: "answersViewController") as! AnswersViewController
+        answersViewController.question = question
+        navigationController?.pushViewController(answersViewController, animated: true)
     }
 }
 
@@ -105,7 +121,7 @@ extension SearchQuestionsViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "questionsTableViewCell") as! QuestionsTableViewCell        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! QuestionsTableViewCell        
         let question = questions[indexPath.row]
         cell.votesLabel.text = "Score: " + String(question.score)
         cell.authorLabel.text = "Author: " + (question.user?.name)!
@@ -119,8 +135,12 @@ extension SearchQuestionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let question = questions[indexPath.row]
         if question.answerCount > 0 {
-            storeAnswersFor(id: question.questionId)
+            print("***********\(question.answerCount)*******")
+            storeAnswersFor(question)
+        } else {
+            Utility.showAlert(title: "Error", message: "The selected questions seems to be unanswered")
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

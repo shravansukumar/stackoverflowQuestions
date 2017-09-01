@@ -20,6 +20,7 @@ class Question: Object, Mappable {
     dynamic var answerCount: Int = 0
     dynamic var score: Int = 0
     dynamic var user: User? = nil
+    dynamic var phrase: String = ""
     
     
     override static func primaryKey() -> String? {

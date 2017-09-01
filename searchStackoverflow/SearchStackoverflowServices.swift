@@ -43,10 +43,32 @@ public final class SearchStackoverflowServices {
                 return responseResult(false, nil)
             } else {
                 if let result = response.result.value as? [String : Any], let item = result["items"] as? [[String : Any]] {
-                    print(item)
                     return responseResult(true, item)
                 }
             }
         }
     }
 }
+
+class Utility {
+    class func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        getTopViewController()?.present(alert, animated: true, completion: nil)
+    }
+    
+    class func getTopViewController() -> UIViewController? {
+        var topViewController: UIViewController?
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+                topViewController = topController
+            }
+        }
+        if topViewController != nil {
+            return topViewController
+        }
+        return nil
+    }
+}
+
